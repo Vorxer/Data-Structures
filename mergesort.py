@@ -1,27 +1,14 @@
 import math
 
 def combine(superarray):
-    loopcontrol=len(superarray)
-    print(loopcontrol)
-    iterate=0
-    outputar=[]
-    for item in superarray:
-        temparray=[]
-        for x in range(2):
-            subarray=superarray[0]
-            superarray.pop(0)
-            temparray=temparray+subarray
-        temparray.sort()
-        print(temparray)
-        outputar=outputar+temparray
-        iterate=iterate+2
-        if (len(superarray)<iterate):
-            print("wut")
-            
-    print(outputar)
+    while (len(superarray) != 1):
+        temp = superarray[0] + superarray[1]
+        temp.sort()
+        superarray.pop(0)
+        superarray.pop(0)
+        superarray.append(temp)
+    return superarray[0]
 
-        
-'''    
 
 def mergesort(array):
 
@@ -61,23 +48,13 @@ def mergesort(array):
                 i[0]=temp1
                 i[1]=temp0
 
-    primary[]
+    outputarray=combine(primary)
+    return outputarray
 
 
-     
-    
-    print(primary)
-    final=[]
 
 
-            
-    
-    
 
-    
-    
-mergesort([45,43,76,13,90,80,78])
-'''
 
-combine([[2,4,9],[8,7,1],[3,6,8]])
+
 
