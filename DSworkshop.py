@@ -1,5 +1,7 @@
 import random
 import math
+from mergesort import *
+from QUuicksort import *
 
 def CommonValue(a,b):
     print("a=",a)

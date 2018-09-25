@@ -1,23 +1,35 @@
 import math
 
 def Quicksort(inputarray):
-    pivot=math.floor((len(inputarray)/2))
+    print("Input=",inputarray)
+    if (len(inputarray)==1):
+        return inputarray
+    if (len(inputarray)==0):
+        return inputarray
+    pivot = inputarray[math.floor((len(inputarray) / 2))]
     greater=[]
     lesser=[]
     print(pivot)
     for item in inputarray:
-        print(inputarray[item - 1])
-        if inputarray[item-1]>inputarray[pivot]:
+        print(item)
+        if item>pivot:
             greater.append(item)
-        if inputarray[item-1]<inputarray[pivot]:
+        if item<pivot:
             lesser.append(item)
+        print("Greater=",greater)
+        print("lesser=", lesser)
+    greater=Quicksort(greater)
+    lesser=Quicksort(lesser)
     outputarray=lesser
-    outputarray.append((inputarray[pivot]))
-    outputarray=outputarray+greater
-
     print(outputarray)
+    outputarray.append(pivot)
+    print(outputarray)
+    outputarray=outputarray+greater
+    print(outputarray)
+    return outputarray
 
-Quicksort([1,2,3,4,5,6,7,8,9,0])
+print(Quicksort([1,2,3,4,5,6,7,8,9,0]))
+
 
 
 

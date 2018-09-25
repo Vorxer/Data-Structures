@@ -1,13 +1,17 @@
 import math
 
-def combine(superarray):
-    while (len(superarray) != 1):
-        temp = superarray[0] + superarray[1]
-        temp.sort()
-        superarray.pop(0)
-        superarray.pop(0)
-        superarray.append(temp)
-    return superarray[0]
+def combine(input1,input2):
+    for item in input2
+        if (item<input1[0]):
+            input1=item+input1
+        elif (item>input1[-1]):
+            input1=input1+item
+        else:
+            for value in input1:
+                if
+
+
+    return input1
 
 
 def mergesort(array):
@@ -18,12 +22,12 @@ def mergesort(array):
     print(len(secondary))
 
     while (len(secondary)!=0):
-        funct=secondary[0]
-        mid=math.floor(int(len((funct))/2))
-        array1=funct[0:mid]
-        array2=funct[mid:len(funct)]
+        funct = secondary[0]
+        mid = len(funct)//2
+        array1 = funct[0:mid]
+        array2 = funct[mid:]
         
-        if (len(array1)<=2):
+        if (len(array1) <= 2):
             primary.append(array1)
         else:
             secondary.append(array1)
@@ -36,7 +40,7 @@ def mergesort(array):
         else:
             secondary.append(array2)
 
-        secondary.pop(0)
+        secondary = secondary[1:]
 
     print("h",primary)
 
@@ -51,10 +55,7 @@ def mergesort(array):
     outputarray=combine(primary)
     return outputarray
 
-
-
-
-
+mergesort([2,6,1,9,0])
 
 
 
